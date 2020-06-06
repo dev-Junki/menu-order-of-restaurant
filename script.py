@@ -25,7 +25,7 @@ for food in foods:
 print('飲み物メニュー')
 index = 0
 for drink in drinks:
-    print(str(index) + '.' + drink.info())
+    print(str(index) + '.' + fdrink.info())
     index += 1
 
 print('--------------------')
