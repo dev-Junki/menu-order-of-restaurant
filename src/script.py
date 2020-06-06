@@ -1,13 +1,11 @@
 from food import Food
 from drink import Drink
 
-
 food1 = Food('サンドイッチ', 500, 330)
 food2 = Food('チョコケーキ', 400, 450)
 food3 = Food('シュークリーム', 200, 180)
 
 foods = [food1, food2, food3]
-
 
 drink1 = Drink('コーヒー', 300, 180)
 drink2 = Drink('オレンジジュース', 200, 350)
@@ -18,39 +16,28 @@ drinks = [drink1, drink2, drink3]
 print('食べ物メニュー')
 index = 0
 for food in foods:
-    print(str(index) + '.' + food.info())
+    print(str(index) + '. ' + food.info())
     index += 1
-   
-   
+
 print('飲み物メニュー')
 index = 0
 for drink in drinks:
-    print(str(index) + '.' + drink.info())
+    print(str(index) + '. ' + drink.info())
     index += 1
 
 print('--------------------')
 
-food_order = 0
-
- # 注文する食べ物メニューを変数selected_foodに代入してください。
+food_order = int(input('食べ物の番号を選択してください: '))
 selected_food = foods[food_order]
 
-drink_order = 0
-
- # 注文する飲み物メニューを変数selected_drinkに代入してください。
+drink_order = int(input('飲み物の番号を選択してください: '))
 selected_drink = drinks[drink_order]
 
- #「○○と□□を注文します」となるように出力してください。
-print(selected_food.name + 'と' + selected_drink.name + 'を注文します')
+# コンソールから入力を受け取り、変数countに代入してください
+count = int(input('何セット買いますか？(3つ以上で１割引): '))
 
-count = 3
+# selected_foodとselected_drinkのそれぞれに対して、get_total_priceメソッドを呼び出してください
+result = selected_food.get_total_price(count) + selected_drink.get_total_price(count)
 
- #「○○セット購入します」となるように出力してください。
-print(str(count) + 'セット購入します')
-
- # selected_foodとselected_drinkのそれぞれに対して、get_toral_priceメソッドを呼び出してください。
-print('合計は' +str(result) + '円です')
-
-
-
-
+# 「合計は〇〇円です」となるように出力してください
+print('お会計は' + str(result) + '円です')
