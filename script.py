@@ -18,15 +18,15 @@ drinks = [drink1, drink2, drink3]
 print('食べ物メニュー')
 index = 0
 for food in foods:
-   print(str(index) + '.' + food.info())
-   index += 1
+    print(str(index) + '.' + food.info())
+    index += 1
    
    
 print('飲み物メニュー')
 index = 0
 for drink in drinks:
-   print(str(index) + '.' + fdrink.info())
-   index += 1
+    print(str(index) + '.' + fdrink.info())
+    index += 1
 
 print('--------------------')
 
